@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>registro</title>
+</head>
+<body>
+
+    <h1>Esto es una pagina de formulario</h1>
+    <p id = "datos"></p>
+
+    <script>
+        const parametros = new URLSearchParams(window.location.search);
+        const nombre = parametros.get("nombre");
+        const correo = parametros.get("correo");
+
+        //visualizar los datos en el html
+        document.getElementById("datos").innerHTML = "Nombre: " + nombre + "<br>" + "Correo: " + correo;
+    </script>
+
+
+    
+</body>
+</html>

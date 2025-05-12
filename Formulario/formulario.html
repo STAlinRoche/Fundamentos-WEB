@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de DATOS</title>
+    <!----Vincular el script externo-->
+    
+        
+</head>
+<body style="font-family: 'Courier New', Courier, monospace; justify-content: center; align-items: center; display: flex; flex-direction: column; background-color: #f0f0f0; padding: 20px;">
+
+    <form action="" id="formRegistro">
+        <h1 style="font-family: 'Courier New', Courier, monospace; background-color: #2f4965;   ">Registro de usuario</h1>
+        <div>
+            <label for="">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required minlength="3" maxlength="20" >
+        </div>
+        <div>
+            <label for="">Apellido:</label>
+            <input type="text" id="apellido" name="apellido" required minlength="3" maxlength="20">
+        </div>
+        <div>
+            <label for="">Email:</label>
+            <input type="email" id="email" name="email" required minlength="3" maxlength="20" >
+        </div>
+
+        <div>
+            <label for="">Contraseña:</label>
+            <input type="text" id="contraseña" name="contraseña" required minlength="8" maxlength="20">
+
+        <div>
+            <label for="">Edad:</label>
+            <input type="text" id="edad" name="edad" required minlength="2" maxlength="2" >
+        </div>
+
+        <div>
+            <label for="">Pais:</label>
+            <select name="" id="pais" required>
+                <option value="">Selecciona un Pais</option>
+                <option value="Ecuador">Ecuador</option>
+                <option value="Colombia">Colombia</option>
+                <option value="Peru">Peru</option>
+                <option value="Chile">Chile</option>
+                <option value="Argentina">Argentina</option>
+                <option value="Paraguay">Paraguay</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="">Provincia:</label>
+            <select name="" id="provincia" required>
+                <option value="">Selecciona una provincia</option>
+                <option value="Pichincha">Pichincha</option>
+                <option value="Guayas">Guayas</option>
+                <option value="Azuay">Azuay</option>
+                <option value="Loja">Loja</option>
+                <option value="Manabi">Manabi</option>
+            </select>
+        </div>
+
+        <button type="submit">
+            Registrarse
+        </button>
+
+
+
+    </form>
+
+    <script src="jv/formulario.js"></script>
+</body>
+</html>
+

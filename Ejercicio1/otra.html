@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina numero2</title>
+</head>
+<body>
+
+    <h1>esta es otra pagina</h1>
+
+    <h2>aqui se recibe los datos</h2>
+
+    <!-- tiene un atributo id, que permite identificar este elemento, sirve para javascript -->
+    <p id = "resultado" ></p>
+
+    <script>
+        // Leer datos de la -url
+        const parametros = new URLSearchParams(window.location.search);
+        const nombre = parametros.get("nombre");
+        const correo = parametros.get("correo");
+
+        //visualizar los datos en el html
+        document.getElementById("resultado").innerHTML = "Nombre: " + nombre + "<br>" + "Correo: " + correo;
+
+    </script>
+    
+</body>
+</html>

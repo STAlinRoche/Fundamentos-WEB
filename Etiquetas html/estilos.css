@@ -1,0 +1,22 @@
+/*Estilos generales*/
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+    background-color: blanchedalmond;
+
+}
+/*Estilo de encabezado*/
+header#cabecera {
+    background-color:blueviolet;
+    padding: 20 px;
+    text-align: center;
+}
+
+/**/
+nav.menu {
+    background-color:brown;
+    padding: 10 px;
+    
+}

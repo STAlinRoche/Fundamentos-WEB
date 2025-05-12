@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado de la vacuna</title>
+</head>
+<body>
+
+    <h1>Resultado de la vacuna</h1>
+
+    <div id="resultado"></div>
+
+    <script>
+        //crear una funcion
+
+        function obtenerParametros(){
+            const parametros = new URLSearchParams(window.location.search);
+            const edad = parseInt(parametros.get('edad'));//obtiene la edad
+            const genero = parametros.get('genero');//obtiene el genero
+            const nombre = parametros.get('nombre');//obtiene el nombre
+
+            let vacuna = '';//variable para almacenar el resultado de la vacuna
+            //logica para determinar la vacuna
+            if (edad >= 70) {
+                vacuna = 'C';
+            } else if (edad >= 16 && edad <= 69) {
+                if (genero === 'mujer') {
+                    vacuna = 'A';
+                } else if (genero === 'hombre') {
+                    vacuna = 'B';
+                }
+            } else if (edad < 16) {
+                vacuna = 'A';
+            }
+
+            //mostrar el resultado en el div
+            document.getElementById('resultado').innerHTML = 
+            ` <p> <strogn>Edad:</strong> ${edad} años</p>
+                <p> <strogn>Genero:</strong> ${genero} </p>
+                    <p> <strogn>Vacuna:</strong> ${vacuna} </p>
+                        <p> <strogn>Nombre:</strong> ${nombre} </p>
+            
+            
+            `; //comilla aguda
+        }
+
+        //llamar a la funcion
+        obtenerParametros();
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de ventas</title>
+</head>
+<body>
+
+    <!--formulario de ventas --->
+    <h1>Este es un formulario de ventas</h1>
+    <br>
+
+    <form action="resultado.html" method="get">
+
+        <!--- ingreso de la edad --->
+        <label for="edad">Edad</label>
+        <input type="number" name="edad" id="edad">
+        <br>
+
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" id="nombre">
+        <br>
+
+        <label for="genero">Genero:</label>
+        <select name="genero" id="genero">
+            <option value="">Seleccione...</option>
+            <option value="mujer">mujer</option>
+            <option value="hombre" >hombre</option>
+        </select>
+
+        <br>
+        <input type="submit" value="Enviar">
+
+    </form>
+    
+</body>
+</html>
