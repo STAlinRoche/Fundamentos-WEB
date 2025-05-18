@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>factura de compras</title>
+    <!-- Enlace a la hoja de estilos -->
+    <link rel="stylesheet" href="css/estilos.css">
+    
+</head>
+<body>
+
+    <header>
+        <h1>Factura</h1>
+        <h2>Ingreso de productos</h2>
+    </header>   
+    <!--Datos de ingreso-->
+
+    <input type="text" id="codigo" placeholder="Codigo">
+    <input type="number" id="cantidad" placeholder="Cantidad">
+    <input type="text" id="descripcion" placeholder="Descripción">
+    <input type="number" id="precio" placeholder="Precio unitario">
+    <input type="number" id="descuento" placeholder="Descuento">
+
+    <!--boton para gregar-->
+    <button onclick="agregarProducto()" id="agregar">Agregar</button>
+
+
+    <!-- Tabla para mostrar los productos -->
+    <table id="tabla">
+        <!--Encabezado de la tabla-->
+        <thead>
+            <tr>
+                <th>Codigo</th>
+                <th>Cantidad</th>
+                <th>Descripción</th>
+                <th>Precio unitario</th>
+                <th>Descuento</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+
+
+        <!--Cuerpo de la tabla-->
+        <tbody>
+            <h3>Cuerpo de la tabla</h3>
+
+        </tbody>
+
+    </table>
+
+    <!--totales-->
+    <div class="resumen" id="resumenTotales">
+        <p>Subtotal sin impuestos: $ <span id="subTotal">0.00</span></p>
+        <p>Subtotal iva 15%: $ <span id="subtotalIVA">0.00</span></p>
+        <p>Total descuento: $ <span id="totalDescuento">0.00</span></p>
+        <p>Valor IVA 15%: $ <span id="valorIVA">0.00</span></p>
+        <p>Total a pagar: $ <span id="valorTotal">0.00</span></p>
+    </div>
+
+    <button id="btnGenerarPDF">Generar PDF</button>
+
+
+    <!-- Agrega esto antes del cierre de </body> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+
+    <!-- Script de funcionalidad -->
+    <script src="js/funciones.js"></script>
+    
+</body>
+</html>

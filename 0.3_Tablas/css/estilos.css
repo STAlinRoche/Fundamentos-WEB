@@ -1,0 +1,92 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 2em;
+    color: #2c3e50;
+}
+
+header h2 {
+    font-size: 1.2em;
+    color: #34495e;
+}
+
+
+input[type="text"],
+input[type="number"] {
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Botón Agregar */
+button#agregar {
+    padding: 10px 20px;
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button#agregar:hover {
+    background-color: #219150;
+}
+
+/* Tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+    background-color: #fff;
+}
+
+thead {
+    background-color: #2980b9;
+    color: white;
+}
+
+table th,
+table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Resumen de totales */
+.resumen {
+    margin-top: 30px;
+    padding: 15px;
+    background-color: #ecf0f1;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 60%;
+}
+
+.resumen p {
+    margin: 10px 0;
+    font-weight: bold;
+    font-size: 1.1em;
+}

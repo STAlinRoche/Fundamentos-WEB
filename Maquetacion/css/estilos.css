@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    font-family: 'courier', monospace;
+    background-color: #f4f4f4;
+}
+
+.contenedor{
+
+    border: 4px solid #f14ec6;
+
+}
+
+header{
+    background-color:aqua;
+    padding: 20px;
+    text-align: center;
+    font-size: bold;
+    font-weight: bold;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    background-color: #f14ec6;
+    border-top: 2px  #f14ec6;
+    border-bottom: 2px  #f14ec6;
+    padding: 10px;
+}
+
+nav a{
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}                               
+
+.portada{
+    position: relative;
+    text-align: center;
+    background-color: white;
+
+
+    padding:10px;
+    border: 4 px solid #f14ec6;
+    border-radius: 20 px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin: 20px;
+}
+
+.portada ::before{
+
+    content: "";
+    display: block;
+    background-color: #f14ec6;
+    height: 30px;
+    background-image: linear-gradient(45deg, transperent 49%, #f14ec6 49%, #f14ec6 51%, transparent 51%),
+    linear-gradient(45deg, #f14ec6 49%, transparent 49%, transparent 51%, #f14ec6 51%);
+    background-size: 100% 100%;
+}
+
+.portada img{
+    position: absolute;
+    background-color: #f14ec6;
+    top: 10px;
+    width: 0;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.portada h1{
+    font-size: 30px;
+    padding: 100px;
+    font-weight: bold;
+    background-color: #f14ec6 ;
+}
+
+.boton{
+    background-color: #f14ec6;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
