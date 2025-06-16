@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Contador de Focos</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+  <h1>Contador de Focos por Color</h1>
+
+  <div class="formulario">
+    <label for="cantidad">¿Cuántos focos hay en el lote?</label>
+    <input type="number" id="cantidad" min="1" value="1">
+
+    <button onclick="generarSeleccion()">Ingresar colores</button>
+
+    <div id="contenedorFocos"></div>
+
+    <button id="btnContar" onclick="contarFocos()" style="display:none;">Contar Focos</button>
+  </div>
+
+  <div class="resultado" id="resultado">
+    <p><strong>Resultado:</strong></p>
+    <div id="detalle"></div>
+  </div>
+
+  <script src="js/funciones.js"></script>
+</body>
+</html>

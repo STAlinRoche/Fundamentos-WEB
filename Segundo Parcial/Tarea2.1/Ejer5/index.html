@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculadora de Ahorro</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+  <div class="contenedor">
+    <h1>Calculadora de Ahorro</h1>
+
+    <div class="formulario">
+      <label for="dias">Saldo inicial</label>
+      <input type="text" value="3" readonly>
+
+      <label for="incremento">Incremento</label>
+      <input type="text" value="3" readonly>
+
+      <label for="dias">Número de días</label>
+      <input type="number" id="dias" min="1" max="365" value="1">
+
+      <button onclick="calcular()">Calcular</button>
+    </div>
+
+    <div class="resultado" id="resultado">
+      <p><strong>Resultado</strong></p>
+      <div id="detalle"></div>
+      <p id="total"></p>
+    </div>
+  </div>
+
+  <script src="js/funciones.js"></script>
+</body>
+</html>
+

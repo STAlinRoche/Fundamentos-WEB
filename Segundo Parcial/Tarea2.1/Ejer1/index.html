@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Salario</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+  <h1>Salario de un Profesor</h1>
+
+  <div class="formulario">
+    <label for="sueldo">Sueldo actual</label>
+    <input type="text" id="saldo" value="1500" readonly>
+
+
+    <label for="incremento">Incremento</label>
+    <input type="text" id="incremento" value="10 %" readonly>
+
+    <label for="anios">Número de años</label>
+    <select id="anios">
+      <option value="1">1 año</option>
+      <option value="2">2 años</option>
+      <option value="3">3 años</option>
+      <option value="4">4 años</option>
+      <option value="5">5 años</option>
+      <option value="6">6 años</option>
+    </select>
+
+    <button onclick="calcular()">Calcular</button>
+  </div>
+
+  <div class="resultado" id="resultado">
+    Resultado
+  </div>
+
+  <script src="js/funciones.js"></script>
+</body>
+</html>

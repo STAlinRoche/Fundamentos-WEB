@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>El Náufrago Satisfecho</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+  <h1>El Náufrago Satisfecho</h1>
+
+  <div class="formulario">
+    <label> Hamburguesa Sencilla ($20):</label>
+    <input type="number" id="sencillas" value="0" min="0">
+
+    <label>Hamburguesa Doble ($25):</label>
+    <input type="number" id="dobles" value="0" min="0">
+
+    <label>Hamburguesa Triple ($28):</label>
+    <input type="number" id="triples" value="0" min="0">
+
+    <label for="tarjeta">¿Paga con tarjeta? (+5%)</label>
+    <select id="tarjeta">
+        <option value="no">No</option>
+        <option value="si">Sí</option>
+    </select>
+
+    <button onclick="calcular()">Calcular total</button>
+  </div>
+
+  <div class="resultado" id="resultado">
+    <p><strong>Total a pagar:</strong></p>
+    <div id="detalle"></div>
+  </div>
+
+  <script src="js/funciones.js"></script>
+</body>
+</html>

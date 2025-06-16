@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Contador de Números</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+  <h1>Contador de Números</h1>
+
+  <div class="formulario">
+    <label for="cantidad">¿Cuántas cantidades deseas ingresar?</label>
+    <input type="number" id="cantidad" min="1" value="1">
+
+    <button onclick="generarInputs()">Ingresar números</button>
+
+    <div id="inputs"></div>
+    <button id="btnCalcular" onclick="contarNumeros()" style="display:none;">Calcular</button>
+  </div>
+
+  <div class="resultado" id="resultado">
+    <p><strong>Resultado:</strong></p>
+    <div id="detalle"></div>
+  </div>
+
+  <script src="js/funciones.js"></script>
+</body>
+</html>
