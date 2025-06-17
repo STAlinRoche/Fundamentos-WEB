@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculo del Aumento de Tarjetas</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <div class="contenedor">
+        <h1 id="titulo">Banco Pichincha</h1>
+        <form id="formulario">
+            <label for="limite">Limite actual:</label>
+            <input type="number" id="limite" class="entrada" required>
+
+            <label for="tipo1">Tipo de tarjeta (1):</label>
+            <input type="number" id="tipo1" class="entrada" >
+            
+            <label for="tipo2">Tipo de tarjeta (2-opcional):</label>
+            <input type="number" id="tipo2" class="entrada">
+
+            <label for="criterio">¿Que criterio utilizar?</label>
+
+            <!--selector para el usuario elija que utilizar--> 
+            <select name="criterio" id="criterio" class="entrada">
+                <option value="mayor">Tipo mayor</option>
+                <option value="elegir">Elegir tipo</option>
+            </select>
+
+            <!--calculos-->
+            <button type="button" id="Calcular">Calcular nuevo limite</button>
+        </form>
+
+
+        <!--Mostrar el resultado-->
+        <div id="resultado" class="resultado">
+        </div>
+    </div>
+
+
+    <!--Scritps-->
+    <script src="js/estilos.js" ></script>
+
+    
+</body>
+</html>

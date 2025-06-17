@@ -1,0 +1,100 @@
+body{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 1px;
+    padding: 0;
+}
+
+header, footer{
+    background-color:bisque;
+    padding: 10px;
+    text-align: center;
+    color: blue;
+}
+
+/*GRid*/
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 3fr ;
+ 
+    gap: 20px;
+    padding: 20px;
+}
+
+.informacion2 {
+    grid-column: 1 / span 3; /* Ocupa las 3 columnas */
+    background-color: #c8b176;
+}
+
+.informacion {
+    background-color: #76c8b1;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.formulario {
+    background-color: #b176c8;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.resultado {
+    background-color: #c8b176;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.paginacion{
+    text-align: center;
+    margin: 30px auto;
+}
+
+/*Paginacion sencilla*/
+.paginacion a {
+    text-decoration: aquamarine;
+    color: blue;
+    padding: 10px;
+    border: 2px solid blue;
+    margin: 0 5px;
+}
+
+.paginacion a.active {
+    background-color: rgb(125, 125, 212);
+    color: rgb(162, 168, 75);
+    border: 2px solid rgb(125, 125, 212);
+}
+
+.paginacion a:hover:not(.active) {
+    background-color: rgb(125, 125, 212);
+    color: rgb(162, 168, 75);
+    border: 2px solid rgb(125, 125, 212);
+}
+
+@media (max-width: 600px) {
+    
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+        
+    .paginacion a {
+        padding: 6px 12px;
+        display: flex;
+    }
+    
+    .formulario, .resultado {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

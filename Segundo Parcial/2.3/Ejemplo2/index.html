@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagospor Uva</title>
+    <link rel="stylesheet" href="cs/estilos.css">
+</head>
+<body>
+
+    <h1>Pagos por embarque</h1>
+
+    <div class="tabla-responsive">
+        <label for="">Precio inicial por kilo $USD</label>
+        <input type="number" id="precio" placeholder="Ej: 1.50">
+        
+        <label>Tipo de Uva</label>
+        <select name="" id="tipo">
+            <option value="A">Tipo A</option>
+            <option value="B">Tipo B</option>
+        </select>
+
+        <label>Tamaño</label>
+        <select name="" id="tamanio">
+            <option value="1">Tamaño 1</option>
+            <option value="2">Tamaño 2</option>
+        </select>
+
+        <label for="">Cantidad de Kilos</label>
+        <input type="number" id="kilos" placeholder="Ej: 10">
+        
+        <button onclick="calcularPago()">Calcular Pago</button>
+
+        <div id="resultado" class="info"></div>
+
+    </div>
+
+
+
+
+
+    <script src="js/funcionalidad.js"></script>
+    
+</body>
+</html>

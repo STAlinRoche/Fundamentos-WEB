@@ -1,0 +1,33 @@
+
+/*selector de atributos*/
+input[type="text"] {
+    border: 1px solid black;
+    color: chartreuse;
+}
+
+/*selector de pseudoelementos*/
+li::before{
+    content: "→ ";
+    color: aquamarine;
+}
+
+/*selectro de pseudoclase*/
+p:hover{
+    color: brown;
+}
+
+header h1 {
+  text-align: center;
+  font-size: 2em;
+}
+
+/*selector combinado*/
+main section {
+  background-color: antiquewhite;
+}
+
+
+/*selector simple*/
+p{
+    color: blueviolet;
+}

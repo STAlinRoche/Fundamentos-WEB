@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Langosta ahumada</title>
+    <link rel="stylesheet" href="estilos_platos.css">
+</head>
+<body>
+
+    <h1>Calcular el presuspuesto de personas</h1>
+    <div class="contenedor">
+        <div class="texto">
+            <p>
+                Langosta ahumada <br>
+                Serviciosde banquete
+            </p>
+        </div>
+    </div>
+
+    <div class="informacion">
+        tarifa por persona: Hasta 200 $95,
+        de 201 a 300 $85,
+        Mas de 300 $75,
+    </div>
+
+    <form id="formulario">
+    
+        <label for="personas">Ingrese el número de personas:</label>
+        <input type="number" id="personas" min="1" required>
+        <button type="submit">Calcular presuspuesto</button>
+    
+    </form>
+
+    <div id="resultado" class="resultado">
+        <div class="animado">Muchas gracias, vuelva pronto</div>
+    </div>
+
+    <script src="funciones_platos.js"></script>
+    
+</body>
+</html>

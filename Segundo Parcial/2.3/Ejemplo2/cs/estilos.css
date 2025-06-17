@@ -1,0 +1,79 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+
+body {
+    background-color: #f4f4f4;
+    padding: 5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+h1 {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    color: #333;
+    margin-bottom: 5vh;
+    text-align: center;
+    width: 100%;
+}
+
+
+.tabla-responsive {
+    background-color: #fff;
+    padding: 5vw;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 4vh;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Etiquetas */
+label {
+    font-size: 1rem;
+    color: #555;
+}
+
+
+input[type="number"],
+select {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+
+button {
+    padding: 12px;
+    width: 100%;
+    font-size: 1rem;
+    background-color: #28a745;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+
+.info {
+    font-size: 1.1rem;
+    color: #333;
+    word-wrap: break-word;
+}
