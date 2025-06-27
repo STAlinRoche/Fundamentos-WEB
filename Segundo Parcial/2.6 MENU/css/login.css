@@ -1,0 +1,160 @@
+/* General */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #89f7fe, #66a6ff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Grid aplicado aquí correctamente */
+.form-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* dos columnas iguales */
+    width: fit-content;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+/* Columna izquierda: formulario */
+.login-container {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+}
+
+.login-container h2 {
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 28px;
+    text-align: center;
+}
+
+.login-container p {
+    margin-bottom: 20px;
+    color: #666;
+    text-align: center;
+}
+
+/* Campos de entrada */
+.input {
+    width: 100%;
+    padding: 12px 15px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+/* Opciones adicionales */
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9em;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.options input[type="checkbox"] {
+    margin-left: 5px;
+}
+
+.options a {
+    text-decoration: none;
+    color: #007BFF;
+    transition: 0.3s;
+}
+
+.options a:hover {
+    color: #0047a0;
+}
+
+/* Botones */
+.btn {
+    display: inline-block;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    margin-top: 10px;
+    font-size: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-login {
+    background-color: #007BFF;
+    color: white;
+}
+
+.btn-login:hover {
+    background-color: #0056b3;
+}
+
+/* Proveedores */
+.providers {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.providers span {
+    display: block;
+    margin-bottom: 12px;
+    font-size: 0.95em;
+    color: #555;
+}
+
+.google-provider {
+    background-color: #db4437;
+    color: white;
+}
+
+.facebokk-provider {
+    background-color: #3b5998;
+    color: white;
+}
+
+.twitter-provider {
+    background-color: #1da1f2;
+    color: white;
+}
+
+.google-provider:hover {
+    background-color: #c23321;
+}
+
+.facebokk-provider:hover {
+    background-color: #2d4373;
+}
+
+.twitter-provider:hover {
+    background-color: #0d95e8;
+}
+
+/* Columna derecha: panel negro */
+.welcome-screen-container {
+    background-color: #000;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px;
+    text-align: center;
+}
+
+.welcome-screen-container h2 {
+    font-size: 30px;
+    font-weight: bold;
+}

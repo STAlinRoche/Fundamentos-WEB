@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sistema de Tutorías ESPE</title>
+  <link rel="stylesheet" href="css/estilos.css" />
+</head>
+<body>
+  <!-- Botón para abrir/ocultar menú -->
+  <button class="btn-menu" id="btnMenu">☰ Menú</button>
+
+  <div class="contenedor-general">
+    <!-- Menú lateral -->
+    <aside class="menu-lateral" id="menuLateral">
+      <div class="logo-espe"><img src="LOGO.jpg" alt=""></div>
+      <div class="usuario">STALIN FABIAN ROCHE CORDOVA</div>
+      <nav class="menu">
+        <ul>
+          <li>
+            <button class="toggle-submenu">📘 Reforzamiento</button>
+            <ul class="submenu">
+              <li><a href="/Segundo Parcial/2.6 MENU/index.html">📋 Planificación</a></li>
+            </ul>
+          </li>
+          <li>
+            <button class="toggle-submenu">📑 Registro de Tutorías</button>
+            <ul class="submenu">
+              <li><a href="www.youtube.com">📝 Registrar Asistencia</a></li>
+              <li><a href="www.facebook.com">📨 Solicitudes</a></li>
+              <li><a href="www.espe.com">📅 Historial</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Contenido principal -->
+    <main class="contenido-principal">
+      <!-- Título grande arriba -->
+      <header class="header-titulo">
+        <h1>Tutorías</h1>
+      </header>
+
+      <!-- Dos grids debajo del título -->
+      <div class="grids-inferiores">
+        <!-- Grid izquierdo: foto + nombre -->
+        <section class="grid-izquierdo">
+          <div class="foto-perfil"><img src="LOGO.jpg" alt=""></div>
+          <div class="nombre-usuario">STALIN FABIAN ROCHE CORDOVA</div>
+        </section>
+
+        <!-- Grid derecho: inicio flotante + instrucciones + cajas azules -->
+        <section class="grid-derecho">
+          <div class="inicio-flotante">Inicio</div>
+          <div class="instrucciones-titulo">Instrucciones</div>
+          <div class="contenedores-azules">
+            <div class="caja-azul"><P>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis, illum quisquam pariatur vero recusandae animi alias neque ad nemo, sint labore porro quia! Ratione molestias error quisquam mollitia consequatur voluptas.</P></div>
+            <div class="caja-azul"><P>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis nobis non deserunt eligendi adipisci placeat suscipit, nemo reiciendis veritatis nulla mollitia tempora doloribus laboriosam eum maxime consequuntur dolor necessitatibus in!</P></div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Contenedores inferiores para texto libre -->
+      <div class="contenedores-inferiores">
+        <div class="caja-inferior">UNIVERSIDAD DE LAS FUERZAS ARMADAS ESPE</div> <br>
+        <br>
+        <div class="caja-inferior">© 2025 Todos los derechos reservado</div>
+      </div>
+    </main>
+  </div>
+
+<script>
+  // Toggle menú y ajustar contenedor
+  const btnMenu = document.getElementById("btnMenu");
+  const menuLateral = document.getElementById("menuLateral");
+  const contenedorGeneral = document.querySelector(".contenedor-general");
+
+  btnMenu.addEventListener("click", () => {
+    menuLateral.classList.toggle("oculto");
+    contenedorGeneral.classList.toggle("sin-menu");
+  });
+
+  // Toggle submenús
+  document.querySelectorAll(".toggle-submenu").forEach(boton => {
+    boton.addEventListener("click", () => {
+      boton.nextElementSibling.classList.toggle("activo");
+    });
+  });
+</script>
+
+</body>
+</html>

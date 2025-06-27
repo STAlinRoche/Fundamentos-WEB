@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contáctanos</title>
+  <link rel="stylesheet" href="css/contacto.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+</head>
+<body>
+
+    <nav>
+        <div class="desktop">
+            <div class="logo">Turismo</div>
+            <button class="menu-toggle" id="menu-toggle">
+                <span class="material-icons">menu</span>
+            </button>
+            <div class="primary nav-links">
+                <a href="index.html">Inicio</a>
+                <a href="#">Destino</a>
+                <a href="gastronomia.html">Gastronomia</a>
+                <a href="contacto.html">Contactanos</a>
+                
+            </div>
+
+            <div class="secodary nav-links">
+                <a href="login.html">Registrarse</a>
+                <a href="login.html">Login</a>
+            </div>
+        </div>
+    </nav>
+
+  <div class="container">
+    <h2>Contáctanos</h2>
+    <form id="contact-form">
+      <label for="nombre">Nombre</label>
+      <input type="text" id="nombre" name="nombre" required />
+
+      <label for="correo">Correo electrónico</label>
+      <input type="email" id="correo" name="correo" required />
+
+      <label for="mensaje">Mensaje</label>
+      <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+
+      <button type="submit">Enviar</button>
+    </form>
+
+    <div id="progress-container" class="hidden">
+      <div class="progress-bar"></div>
+      <p>Mensaje enviado...</p>
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById('contact-form');
+    const progress = document.getElementById('progress-container');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      progress.classList.remove('hidden');
+      form.classList.add('hidden');
+
+      setTimeout(() => {
+        progress.querySelector("p").textContent = "¡Gracias por tu mensaje!";
+        progress.querySelector(".progress-bar").style.background = "#2ecc71";
+      }, 3000);
+
+
+    });
+  </script>
+</body>
+</html>

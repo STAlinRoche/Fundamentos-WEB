@@ -1,0 +1,169 @@
+body{
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/*Elementos dentro del contenedor*/
+nav{
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+}
+
+nav .desktop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/*Estilos de los enlaces de nav*/
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    padding: 10px 15px;
+}
+
+nav a:hover {
+    background-color: #555;
+    border-radius: 5px;
+    color: darkgrey;
+}
+
+/*Contenedor de la notificacion*/
+.notificacion {
+    width: 50px;
+    margin: 20px auto;
+    transform: translate(50%, 4px); /* Corrige esta línea (antes estaba mal escrita) */
+}
+
+.notificacion:hover {
+    animation: ring 0.7s ease-in-out; /* Duración más corta y sin delay */
+}
+
+
+/*Estilo a la notificacion*/
+.notificacion .count {
+    color: red;
+    text-align: center;
+    font-size: 20px;
+    position: relative;
+    top: 20px;
+    left: 0px;
+    cursor: pointer;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    background-color: #f0f0f0;
+    color: black;
+    border-radius: 10px;
+    width: 300px;
+    padding: 20px;
+    box-shadow: 0 8px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.card a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.card a:hover {
+    text-decoration: underline;
+}
+
+.table {
+    width: 75%;
+    border-collapse: collapse;
+    margin: 40px auto;
+    padding: 50px;
+    text-align: center;
+}
+
+thead {
+    background-color: #333;
+    color: rgb(162, 146, 146);
+}
+
+th, td {
+    border: 2px solid #333;
+    padding: 10px;
+    text-align: center;
+}
+
+tbody tr:hover {
+    background-color: #f2f2f2;
+}
+
+
+/*Tarjetas*/
+
+@keyframes ring {
+    0%, 100% { transform: rotate(0deg); }
+    10% { transform: rotate(2deg); }
+    20% { transform: rotate(-2deg); }
+    30% { transform: rotate(1.5deg); }
+    40% { transform: rotate(-1.5deg); }
+    50% { transform: rotate(1deg); }
+    60% { transform: rotate(-1deg); }
+    70% { transform: rotate(0.5deg); }
+    80% { transform: rotate(-0.5deg); }
+    90% { transform: rotate(0.2deg); }
+}
+
+@media screen and (max-width: 768px) {
+    nav .desktop {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu-toggle {
+        display: block;
+        margin-left: auto;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-links a {
+        padding: 12px 20px;
+        border-top: 1px solid #444;
+        width: 100%;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+}

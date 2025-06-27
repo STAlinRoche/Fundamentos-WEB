@@ -1,0 +1,201 @@
+body {
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #121212;
+    color: #f0f0f0;
+}
+
+/* Navegación */
+nav {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+}
+
+nav .desktop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+nav .logo {
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 5px;
+}
+
+nav a:hover,
+nav a.active {
+    background-color: #555;
+    color: #bbb;
+}
+
+/* Contenedor notificaciones */
+.notificacion {
+    width: 50px;
+    margin: 20px auto;
+    position: relative;
+    cursor: pointer;
+    transform: translate(50%, 4px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.notificacion:hover {
+    animation: ring 0.7s ease-in-out;
+}
+
+.notificacion .count {
+    color: #ff4c4c;
+    font-weight: bold;
+    font-size: 18px;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: #222;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 6px #ff4c4c;
+    user-select: none;
+}
+
+/* Icono notificación */
+.material-symbols-outlined {
+    font-size: 32px;
+    color: #ff4c4c;
+}
+
+/* Tarjetas */
+.cards {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto 40px auto;
+}
+
+.card {
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+    border-radius: 10px;
+    width: 320px;
+    padding: 20px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.7);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: default;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(0, 188, 212, 0.6);
+}
+
+.card .header .title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #00bcd4;
+}
+
+/* Tabla */
+.table {
+    width: 80%;
+    max-width: 1100px;
+    border-collapse: collapse;
+    margin: 40px auto 60px auto;
+    text-align: center;
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.7);
+}
+
+.table caption {
+    caption-side: top;
+    padding: 15px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #00bcd4;
+    background-color: #121212;
+}
+
+thead {
+    background-color: #333;
+    color: #bbb;
+}
+
+th, td {
+    padding: 12px 15px;
+    border: 1px solid #444;
+}
+
+tbody tr:hover {
+    background-color: #272727;
+}
+
+/* Animación notificación */
+@keyframes ring {
+    0%, 100% { transform: rotate(0deg); }
+    10% { transform: rotate(2deg); }
+    20% { transform: rotate(-2deg); }
+    30% { transform: rotate(1.5deg); }
+    40% { transform: rotate(-1.5deg); }
+    50% { transform: rotate(1deg); }
+    60% { transform: rotate(-1deg); }
+    70% { transform: rotate(0.5deg); }
+    80% { transform: rotate(-0.5deg); }
+    90% { transform: rotate(0.2deg); }
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    nav .desktop {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        margin-top: 10px;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav a {
+        margin: 5px;
+        padding: 8px 12px;
+    }
+
+    .cards {
+        justify-content: center;
+    }
+
+    .card {
+        width: 90%;
+        max-width: 320px;
+    }
+
+    .table {
+        width: 95%;
+        font-size: 14px;
+    }
+}

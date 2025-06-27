@@ -1,0 +1,281 @@
+body {
+  margin: 0;
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #f9f9f9;
+}
+
+/* NAVBAR SUPERIOR */
+nav.topbar {
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* LOGOUT BUTTON */
+.logout-btn {
+  background-color: #e74c3c;
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.logout-btn:hover {
+  background-color: #c0392b;
+}
+
+/* SIDEBAR */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 100vh;
+  background-color: #222;
+  color: white;
+  transition: width 0.3s ease;
+  overflow: hidden;
+  z-index: 1000;
+  padding-top: 20px;
+}
+
+.sidebar-expandida {
+  width: 230px !important;
+}
+
+.user-profile {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.user-profile img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.user-profile h3 {
+  font-size: 16px;
+  margin: 10px 0;
+  color: white;
+}
+
+.sidebar-menu {
+  display: flex;
+  flex-direction: column;
+  padding: 0 15px;
+}
+
+.sidebar-menu a {
+  color: white;
+  text-decoration: none;
+  padding: 12px 0;
+  border-bottom: 1px solid #444;
+  transition: background 0.3s;
+}
+
+.sidebar-menu a:hover {
+  background-color: #444;
+}
+
+/* CONTENIDO PRINCIPAL */
+.main-content {
+  margin-left: 60px;
+  transition: margin-left 0.3s ease;
+  padding: 20px;
+}
+
+.sidebar-expandida ~ .main-content {
+  margin-left: 230px !important;
+}
+
+/* NOTIFICACIÓN */
+.notificacion {
+  position: relative;
+  cursor: pointer;
+}
+
+.notificacion .count {
+  color: red;
+  font-size: 14px;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+}
+
+/* ANIMACIÓN NOTIFICACIÓN */
+.notificacion:hover {
+  animation: ring 0.7s ease-in-out;
+}
+
+@keyframes ring {
+  0%, 100% { transform: rotate(0deg); }
+  10% { transform: rotate(2deg); }
+  20% { transform: rotate(-2deg); }
+  30% { transform: rotate(1.5deg); }
+  40% { transform: rotate(-1.5deg); }
+  50% { transform: rotate(1deg); }
+  60% { transform: rotate(-1deg); }
+  70% { transform: rotate(0.5deg); }
+  80% { transform: rotate(-0.5deg); }
+  90% { transform: rotate(0.2deg); }
+}
+
+/* BARRA DE BÚSQUEDA */
+.search-bar {
+  border: solid 1px #ccc;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 5px 10px;
+  width: 700px;
+  margin: 30px auto;
+  background-color: white;
+}
+
+.search-bar:focus-within {
+  border: solid 1px #aaa;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.search-bar input[type="text"] {
+  border: none;
+  outline: none;
+  flex: 1;
+  padding: 10px;
+  font-size: 18px;
+  background: none;
+}
+
+.search-bar .actions {
+  display: flex;
+  gap: 5px;
+}
+
+.search-bar .actions button {
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+  color: #999;
+  font-size: 20px;
+}
+
+.search-bar .actions button:hover {
+  color: #2979e2;
+}
+
+/* CARDS */
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background-color: #f0f0f0;
+  color: black;
+  border-radius: 10px;
+  width: 300px;
+  padding: 20px;
+  box-shadow: 0 8px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.card a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 14px;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+.card a:hover {
+  text-decoration: underline;
+}
+
+/* TABLA */
+.table {
+  width: 90%;
+  border-collapse: collapse;
+  margin: 40px auto;
+  text-align: center;
+}
+
+caption {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+thead {
+  background-color: #333;
+  color: rgb(200, 200, 200);
+}
+
+th, td {
+  border: 2px solid #333;
+  padding: 10px;
+  text-align: center;
+}
+
+tbody tr:hover {
+  background-color: #f2f2f2;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 768px) {
+  .search-bar {
+    width: 95%;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+
+  .main-content {
+    margin-left: 0 !important;
+  }
+
+  .sidebar-expandida ~ .main-content {
+    margin-left: 0 !important;
+  }
+}
