@@ -11,7 +11,7 @@ function animateProgress() {
     percentageText.style.display = "none";
     bienvenida.style.display = "block";
     setTimeout(() => {
-      window.location.href = "main.html"; 
+      window.location.href = "main.html";     
     }, 2000);
   }
 }

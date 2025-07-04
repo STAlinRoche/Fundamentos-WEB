@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo usando Bootstrap</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+
+    <!-- 🔵 NAVBAR DE BOOTSTRAP -->
+    <nav class="navbar navbar-expand-lg navbar-secondary bg-secondary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Menubar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav" aria-controls="navbarNav"
+                    aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                    <a class="btn btn-primary rounded-pill px-3 mx-2" href="https://getbootstrap.com/docs/5.3/components/navbar/#how-it-works">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="https://getbootstrap.com/docs/5.3/components/navbar/#how-it-works">Acerca</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="https://getbootstrap.com/docs/5.3/components/navbar/#how-it-works">Ejercicio 1</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="https://getbootstrap.com/docs/5.3/components/navbar/#how-it-works">Ejercicio 2</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="https://getbootstrap.com/docs/5.3/components/navbar/#how-it-works">Ejercicio 3</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- 🔚 FIN DEL NAVBAR -->
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <div class="container mt-5">
+        <h1 class="mb-4">Suma de arreglos con JS</h1>
+
+        <div>
+            <label for="arrayInput" class="form-label">Arreglo de 10 números (separar por comas)</label>
+            <input type="text" class="form-control" id="arrayInput" placeholder="Ej: 1,2,3,...">
+        </div>
+        
+        <button class="btn btn-primary mb-3 mt-2" onclick="calcularBtn()">Calcular suma</button>
+        <div class="alert alert-info" id="resultado"></div>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="funciones/calculos.js"></script>
+</body>
+</html>

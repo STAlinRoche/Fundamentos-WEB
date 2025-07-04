@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reportes tecnicos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <div class="container my-5">
+        
+        <h3>Reportes tecnicos generados</h3>
+        
+        <!--Div para los botones-->
+        <div class="d-flex justify-content-between my-3">
+            <button class="btn btn-secondary"
+             onclick="verFomulario()">Ver Formulario</button>
+            
+            <div>
+                <button class="btn btn-success me-2" 
+                onclick="exportarJSON()">Exportar JSON</button>
+
+                <button class="btn btn-danger" 
+                onclick="borrarTodo()">Borrar</button>
+            </div>
+
+        </div>
+
+
+        <div id="tabla-informes">
+            <!--Aqui se incertara de manera dinamica la tabla -->
+        </div>
+    </div>
+
+
+    <!--Scritpt-->
+    <script >
+        const datos = JSON.parse(localStorage.getItem('informes'));
+        /*Verificar si hay datos o no hay datos*/
+        if (datos && datos.length > 0) {
+            /*Variable llamada fila*/
+            let filas = '';
+            datos.forEach((item, i) => {
+                filas += `
+                    <tr>
+                        <td>${i + 1}</td>
+                        <td>${item.fecha}</td>
+                        <td>${item.hora}</td>
+                        <td>${item.responsable}</td>
+                        <td>${item.motivo}</td>
+                        <td>${item.manipulacion}</td>
+                        <td>${item.descripcion}</td>
+                    </tr>
+                `;
+            });
+
+            document.getElementById('tabla-informes').innerHTML = `
+                <table class="table table-striped table-bordered table-dark">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>#</th>
+                            <th>Fecha</th>
+                            <th>Hora</th>
+                            <th>Responsable</th>
+                            <th>Motivo</th>
+                            <th>Manipulacion</th>
+                            <th>Descripcion</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        ${filas}
+                    </tbody>
+                </table>
+            `;
+        } else {
+            document.getElementById('tabla-informes').innerHTML = `
+                <div class="alert alert-warning" role="alert">
+                    No hay informes tecnicos generados.
+                </div>
+            `;
+        }
+
+        function borrarTodo() {
+            localStorage.removeItem('informes');
+            location.reload();
+        }
+
+        function verFomulario() {
+            window.location.href = 'index.html';
+        }
+
+        function exportarJSON() {
+            const datos = JSON.parse(localStorage.getItem('informes'));
+            /*Condicoion y un alert "No hay datosque exportar"*/
+            if (datos && datos.length > 0) {
+                const blob = new Blob([JSON.stringify(datos, null, 2)], { type: 'application/json' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'informes_tecnicos.json';
+                a.click();
+                URL.revokeObjectURL(url);
+            } else {
+                alert('No hay datos para exportar.');
+            }
+        }
+
+        const enlace = document.createElement('a');
+        enlace.href = url;
+        enlace.download = 'informes.json';
+        document.body.appendChild(enlace);
+        enlace.click();
+        document.body.removeChild(enlace);
+        //Liberar memoria url...
+        URL.revokeObjectURL(url);
+
+    </script>
+    
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>    
+</body>
+</html>
