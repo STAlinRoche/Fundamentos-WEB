@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 2 - Alumnos y Promedios</title>
+  <link rel="stylesheet" href="/Tarea_informe2.2/css/ejercicio2.css">
+</head>
+<body>
+  <div class="contenedor">
+    <h2>Ejercicio 2: Ordenar alumnos por promedio</h2>
+
+    <form id="alumnoForm">
+      <label for="nombre">Nombre del alumno:</label>
+      <input type="text" id="nombre" required>
+
+      <label for="promedio">Promedio:</label>
+      <input type="number" id="promedio" step="0.01" required>
+
+      <button type="submit">Agregar alumno</button>
+    </form>
+
+    <button id="ordenarBtn">Ordenar por promedio</button>
+
+    <div id="resultado" class="resultado"></div>
+  </div>
+
+  <script src="/Tarea_informe2.2/js/ejercicios2.js"></script>
+</body>
+</html>
