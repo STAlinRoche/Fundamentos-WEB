@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Distancia entre dos puntos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+  <!-- Barra de navegación -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm mb-4">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">Ejercicios</a>
+      <div>
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="ejercicio1.html">Ejercicio 1</a></li>
+          <li class="nav-item"><a class="nav-link" href="ejercicio2.html">Ejercicio 2</a></li>
+          <li class="nav-item"><a class="nav-link" href="ejercicio3.html">Ejercicio 3</a></li>
+          <li class="nav-item"><a class="nav-link" href="ejercicio4.html">Ejercicio 4</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Contenido principal -->
+  <div class="container">
+    <div class="card shadow-sm">
+      <div class="card-body">
+        <h2 class="card-title mb-4">Distancia entre dos puntos en el espacio</h2>
+
+        <div class="row mb-3">
+          <label class="form-label">Punto 1 (x1, y1, z1):</label>
+          <div class="col-md-4"><input type="number" class="form-control" id="x1" placeholder="x1"></div>
+          <div class="col-md-4"><input type="number" class="form-control" id="y1" placeholder="y1"></div>
+          <div class="col-md-4"><input type="number" class="form-control" id="z1" placeholder="z1"></div>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label">Punto 2 (x2, y2, z2):</label>
+          <div class="col-md-4"><input type="number" class="form-control" id="x2" placeholder="x2"></div>
+          <div class="col-md-4"><input type="number" class="form-control" id="y2" placeholder="y2"></div>
+          <div class="col-md-4"><input type="number" class="form-control" id="z2" placeholder="z2"></div>
+        </div>
+
+        <button class="btn btn-primary" onclick="calcular()">Calcular distancia</button>
+
+        <div class="mt-4">
+          <p class="fs-5" id="resultado"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    function calcular() {
+      const x1 = parseFloat(document.getElementById("x1").value);
+      const y1 = parseFloat(document.getElementById("y1").value);
+      const z1 = parseFloat(document.getElementById("z1").value);
+      const x2 = parseFloat(document.getElementById("x2").value);
+      const y2 = parseFloat(document.getElementById("y2").value);
+      const z2 = parseFloat(document.getElementById("z2").value);
+
+      if (
+        isNaN(x1) || isNaN(y1) || isNaN(z1) ||
+        isNaN(x2) || isNaN(y2) || isNaN(z2)
+      ) {
+        document.getElementById("resultado").innerText = "Por favor, completa todos los valores correctamente.";
+        return;
+      }
+
+      const distancia = Math.sqrt(
+        Math.pow(x2 - x1, 2) +
+        Math.pow(y2 - y1, 2) +
+        Math.pow(z2 - z1, 2)
+      );
+
+      document.getElementById("resultado").innerText = `Distancia: ${distancia.toFixed(2)}`;
+    }
+  </script>
+
+</body>
+</html>

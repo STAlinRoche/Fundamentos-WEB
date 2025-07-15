@@ -8,6 +8,15 @@ function calcular() {
   const cantidadT = parseInt(document.getElementById("triples").value) || 0;
   const conTarjeta = document.getElementById("tarjeta").value === "si";
 
+  // Validar que no haya valores negativos o cero
+  if (
+    cantidadS < 0 || cantidadD < 0 || cantidadT < 0 ||
+    (cantidadS === 0 && cantidadD === 0 && cantidadT === 0)
+  ) {
+    document.getElementById("detalle").innerHTML = `<span style="color: red;">⚠️ Por favor, ingresa cantidades mayores a 0. No se permiten valores negativos.</span>`;
+    return;
+  }
+
   const subtotal = (cantidadS * precioS) + (cantidadD * precioD) + (cantidadT * precioT);
   const recargo = conTarjeta ? subtotal * 0.05 : 0;
   const total = subtotal + recargo;

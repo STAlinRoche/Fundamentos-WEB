@@ -4,6 +4,38 @@
   <meta charset="UTF-8">
   <title>El Náufrago Satisfecho</title>
   <link rel="stylesheet" href="css/estilos.css">
+   <style>
+    footer {
+      background-color: #333;
+      color: white;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    footer a {
+      color: white;
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    body {
+      margin: 0;
+      padding-bottom: 60px; /* para que el contenido no quede oculto detrás del footer */
+      font-family: Arial, sans-serif;
+    }
+  </style>
 </head>
 <body>
 
@@ -11,13 +43,13 @@
 
   <div class="formulario">
     <label> Hamburguesa Sencilla ($20):</label>
-    <input type="number" id="sencillas" value="0" min="0">
+    <input type="number" id="sencillas" value="0" min="1">
 
     <label>Hamburguesa Doble ($25):</label>
-    <input type="number" id="dobles" value="0" min="0">
+    <input type="number" id="dobles" value="0" min="1">
 
     <label>Hamburguesa Triple ($28):</label>
-    <input type="number" id="triples" value="0" min="0">
+    <input type="number" id="triples" value="0" min="1">
 
     <label for="tarjeta">¿Paga con tarjeta? (+5%)</label>
     <select id="tarjeta">
@@ -32,6 +64,15 @@
     <p><strong>Total a pagar:</strong></p>
     <div id="detalle"></div>
   </div>
+
+    <!-- FOOTER NAVBAR -->
+  <footer>
+    <a href="/Tarea2.1/Ejer1/index.html">Ejercicio 1</a>
+    <a href="/Tarea2.1/Ejer2/index.html">Ejercicio 2</a>
+    <a href="/Tarea2.1/Ejer3/index.html">Ejercicio 3</a>
+    <a href="/Tarea2.1/Ejer4/index.html">Ejercicio 4</a>
+    <a href="/Tarea2.1/Ejer5/index.html">Ejercicio 5</a>
+  </footer>
 
   <script src="js/funciones.js"></script>
 </body>
