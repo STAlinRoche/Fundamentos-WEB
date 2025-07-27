@@ -1,0 +1,15 @@
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+button{
+    margin: 5px;
+    padding: 8px;
+}
+
+#resultados{
+    margin-top: 10px;
+    font-weight: bold;
+    padding: 15px;
+    background-color: lightgray;
+}
