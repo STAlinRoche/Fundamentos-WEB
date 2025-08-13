@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Fogot</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="icono/icono.png" type="image/png" />
+</head>
+
+<body class="bg-light">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm px-4">
+        <a class="navbar-brand fw-bold fs-3" href="#">ADMIN FOGOT</a>
+        <div class="collapse navbar-collapse justify-content-end">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link fw-semibold" id="logout-btn" href="#">CERRAR SESIÓN</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container py-5">
+        <h1 class="mb-4">Panel de Administración</h1>
+
+        <!-- Filtro por fecha -->
+        <div class="card p-3 mb-4">
+            <div class="row g-3 align-items-end">
+
+                <!-- Columna para el tipo de filtro -->
+                <div class="col-md-3">
+                    <label for="filter-type" class="form-label"><strong>Buscar por:</strong></label>
+                    <select id="filter-type" class="form-select" required>
+                        <option value="fecha" selected>Fecha</option>
+                        <option value="cedula">Cédula del Cliente</option>
+                        <option value="nombre">Nombre del Cliente</option>
+                        <option value="apellido">Apellido del Cliente</option>
+                    </select>
+                </div>
+
+                <div class="col-md-4">
+                    <label for="filter-value" class="form-label"><strong>Valor:</strong></label>
+                    <!-- Este contenedor se llenará con JavaScript -->
+                    <div id="filter-input-container"></div>
+                </div>
+
+                <!-- Columna para el botón de búsqueda -->
+                <div class="col-md-2">
+                    <button id="search-btn" class="btn btn-primary w-100">Buscar</button>
+                </div>
+                <div class="col-md-3">
+                    <button id="export-availability-pdf" class="btn btn-info text-white">Disponibilidad (PDF)</button>
+                    <button id="export-reservations-pdf" class="btn btn-success">Reservas (PDF)</button>
+                </div>
+
+            </div>
+        </div>  
+
+        <!-- Resultados -->
+        <div class="row">
+            <!-- Disponibilidad de Mesas -->
+            <div class="col-lg-7" id="availability-card-container">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Disponibilidad de Mesas</h3>
+                    </div>
+                    <div class="card-body">
+                        <div id="admin-availability-list">
+                            <p class="text-muted">Seleccione una fecha para ver la disponibilidad.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Reservas del Día -->
+            <div class="col-lg-5">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Reservas del Día</h3>
+                    </div>
+                    <div class="card-body">
+                        <div id="admin-reservations-list" class="table-responsive">
+                            <p class="text-muted">Seleccione una fecha para ver las reservas.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/jspdf@latest/dist/jspdf.umd.min.js"></script>
+    <script src="https://unpkg.com/jspdf-autotable@latest/dist/jspdf.plugin.autotable.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+
+</html>
